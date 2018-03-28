@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Inari::Cms::Realty
 Short description and motivation.
 
@@ -26,3 +27,6 @@ Contribution directions go here.
 
 ## License
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+=======
+# inari-cms-realty
+>>>>>>> 85b43d84247daed9f9f6351fb516ff5cebd32d8e
