@@ -1,0 +1,10 @@
+ru:
+  activerecord:
+    models:
+      offer_type:
+        one: Тип предложения
+        other: Типы предложения
+    attributes:
+      offer_type:
+        name: Название
+        description: Описание

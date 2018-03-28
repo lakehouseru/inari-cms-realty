@@ -1,0 +1,9 @@
+ru:
+  activerecord:
+    models:
+      price_type:
+        one: Тип цены
+        other: Типы цены
+    attributes:
+      price_type:
+        name: Название
