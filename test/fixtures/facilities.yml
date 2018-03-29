@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  gallery_id: 1
+  square: 1
+  adress: MyString
+  metro_station_id: 1
+  okrug_id: 1
+  floors: 1
+  class: 
+  distance: 1
+  description: MyText
+  user_id: 1
+  facility_type_id: 1
+
+two:
+  name: MyString
+  gallery_id: 1
+  square: 1
+  adress: MyString
+  metro_station_id: 1
+  okrug_id: 1
+  floors: 1
+  class: 
+  distance: 1
+  description: MyText
+  user_id: 1
+  facility_type_id: 1

@@ -10,5 +10,6 @@ Rails.application.routes.draw do
 		resources :regions
 		resources :buildings
 		resources :floors
+		resources :facilities
   	end
 end

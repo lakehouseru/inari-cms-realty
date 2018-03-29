@@ -1,0 +1,20 @@
+ru:
+  activerecord:
+    models:
+      facility:
+        one: Объект
+        other: Объекты
+    attributes:
+      facility:
+        name: Название
+        gallery_id: Галерея
+        square: Площадь общая
+        adress: Адрес
+        metro_station_id: Станция метро
+        okrug_id: Округ
+        floors: Этажность
+        level: Класс
+        distance: Расстояние до метро
+        description: Описание
+        user_id: Брокер
+        facility_type_id: Тип объекта
