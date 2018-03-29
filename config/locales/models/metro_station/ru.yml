@@ -1,0 +1,10 @@
+ru:
+  activerecord:
+    models:
+      metro_station:
+        one: Станция метро
+        other: Станции метро
+    attributes:
+      metro_station:
+        name: Название
+        metro_line_id: Линия метро

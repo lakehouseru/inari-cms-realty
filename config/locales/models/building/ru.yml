@@ -1,0 +1,10 @@
+ru:
+  activerecord:
+    models:
+      building:
+        one: Строение
+        other: Строения
+    attributes:
+      building:
+        name: Название
+        description: Описание

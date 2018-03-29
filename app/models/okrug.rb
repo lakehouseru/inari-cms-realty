@@ -1,0 +1,2 @@
+class Okrug < ApplicationRecord
+end

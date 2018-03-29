@@ -1,0 +1,10 @@
+ru:
+  activerecord:
+    models:
+      facility_type:
+        one: Тип адреса
+        other: Типы адресов
+    attributes:
+      facility_type:
+        name: Название
+        description: Описание

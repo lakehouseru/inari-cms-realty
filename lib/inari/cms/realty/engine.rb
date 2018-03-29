@@ -2,7 +2,6 @@ module Inari
   module Cms
     module Realty
       class Engine < ::Rails::Engine
-        isolate_namespace Inari::Cms::Realty
         config.i18n.load_path += Dir[Engine.root.join('config', 'locales', '**', '*.{rb,yml}').to_s]
 
         initializer :append_migrations do |app|

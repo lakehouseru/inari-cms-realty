@@ -1,0 +1,10 @@
+ru:
+  activerecord:
+    models:
+      region:
+        one: Регион
+        other: Регионы
+    attributes:
+      region:
+        name: Название
+        description: Описание

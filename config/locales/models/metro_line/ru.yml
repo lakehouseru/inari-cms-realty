@@ -1,0 +1,10 @@
+ru:
+  activerecord:
+    models:
+      metro_line:
+        one: Линия метро
+        other: Линии метро
+    attributes:
+      metro_line:
+        name: Название
+        color: Цвет

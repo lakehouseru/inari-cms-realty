@@ -1,0 +1,11 @@
+ru:
+  activerecord:
+    models:
+      floor:
+        one: Этаж
+        other: Этажи
+    attributes:
+      floor:
+        name: Название
+        description: Описание
+        building_id: Строение

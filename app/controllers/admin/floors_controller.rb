@@ -1,18 +1,18 @@
 module Admin
-  class OfferTypesController < Admin::ApplicationController
+  class FloorsController < Admin::ApplicationController
     # To customize the behavior of this controller,
     # you can overwrite any of the RESTful actions. For example:
     #
     # def index
     #   super
-    #   @resources = OfferType.
+    #   @resources = Floor.
     #     page(params[:page]).
     #     per(10)
     # end
 
     # Define a custom finder by overriding the `find_resource` method:
     # def find_resource(param)
-    #   OfferType.find_by!(slug: param)
+    #   Floor.find_by!(slug: param)
     # end
 
     # See https://administrate-prototype.herokuapp.com/customizing_controller_actions
