@@ -29,8 +29,7 @@ class OfferTypeDashboard < Administrate::BaseDashboard
       :description
 
   ]
-
   def display_resource(item)
-    item.try(:title)
+    item.name
   end
 end

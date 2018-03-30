@@ -51,4 +51,7 @@ class MetroStationDashboard < Administrate::BaseDashboard
   # def display_resource(metro_station)
   #   "MetroStation ##{metro_station.id}"
   # end
+  def display_resource(item)
+    item.name
+  end
 end

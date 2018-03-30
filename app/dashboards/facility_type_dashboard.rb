@@ -52,4 +52,7 @@ class FacilityTypeDashboard < Administrate::BaseDashboard
   # def display_resource(facility_type)
   #   "FacilityType ##{facility_type.id}"
   # end
+  def display_resource(item)
+    item.name
+  end
 end

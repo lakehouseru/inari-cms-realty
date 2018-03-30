@@ -13,6 +13,7 @@ class FacilityDashboard < Administrate::BaseDashboard
     okrug: Field::BelongsTo,
     user: Field::BelongsTo,
     facility_type: Field::BelongsTo,
+    published_at: Field::DatePicker,
     id: Field::Number,
     name: Field::String,
     square: Field::Number,
@@ -53,6 +54,7 @@ class FacilityDashboard < Administrate::BaseDashboard
     :level,
     :distance,
     :description,
+    :published_at,
     :created_at,
     :updated_at,
   ].freeze
@@ -73,6 +75,7 @@ class FacilityDashboard < Administrate::BaseDashboard
     :level,
     :distance,
     :description,
+    :published_at
   ].freeze
 
   # Overwrite this method to customize how facilities are displayed
@@ -81,4 +84,7 @@ class FacilityDashboard < Administrate::BaseDashboard
   # def display_resource(facility)
   #   "Facility ##{facility.id}"
   # end
+  def display_resource(item)
+    item.name
+  end
 end

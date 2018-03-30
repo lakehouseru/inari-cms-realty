@@ -18,3 +18,4 @@ ru:
         description: Описание
         user_id: Брокер
         facility_type_id: Тип объекта
+        published_at: Дата публикации

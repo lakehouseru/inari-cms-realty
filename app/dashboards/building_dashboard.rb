@@ -8,6 +8,7 @@ class BuildingDashboard < Administrate::BaseDashboard
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
+    facility: Field::BelongsTo,
     id: Field::Number,
     name: Field::String,
     description: WysiwygField,
@@ -24,6 +25,7 @@ class BuildingDashboard < Administrate::BaseDashboard
     :id,
     :name,
     :description,
+    :facility
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -32,6 +34,7 @@ class BuildingDashboard < Administrate::BaseDashboard
     :id,
     :name,
     :description,
+    :facility,
     :created_at,
     :updated_at,
   ].freeze
@@ -42,6 +45,7 @@ class BuildingDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = [
     :name,
     :description,
+    :facility
   ].freeze
 
   # Overwrite this method to customize how buildings are displayed
@@ -50,4 +54,7 @@ class BuildingDashboard < Administrate::BaseDashboard
   # def display_resource(building)
   #   "Building ##{building.id}"
   # end
+  def display_resource(item)
+    item.name
+  end
 end

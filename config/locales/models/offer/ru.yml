@@ -1,0 +1,20 @@
+ru:
+  activerecord:
+    models:
+      offer:
+        one: Лот
+        other: Лоты
+    attributes:
+      offer:
+        name: Название
+        status: Статус
+        gallery_id: Галерея
+        offer_type_id: Тип предложения
+        floor_id: Этаж/Зона
+        building_id: Строение
+        facility_id: Объект
+        published_at: Дата публикации
+        price: Цена
+        price_type_id: Тип цены
+        square: Площадь
+        description: Описание

@@ -54,4 +54,7 @@ class FloorDashboard < Administrate::BaseDashboard
   # def display_resource(floor)
   #   "Floor ##{floor.id}"
   # end
+  def display_resource(item)
+    item.name
+  end
 end

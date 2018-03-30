@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180329162442) do
+ActiveRecord::Schema.define(version: 20180330115458) do
 
   create_table "buildings", force: :cascade do |t|
     t.string "name"
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "facility_id"
   end
 
   create_table "facilities", force: :cascade do |t|
@@ -34,6 +35,7 @@ ActiveRecord::Schema.define(version: 20180329162442) do
     t.integer "facility_type_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "published_at"
   end
 
   create_table "facility_types", force: :cascade do |t|
@@ -70,7 +72,23 @@ ActiveRecord::Schema.define(version: 20180329162442) do
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "offer_types_id"
+  end
+
+  create_table "offers", force: :cascade do |t|
+    t.string "name"
+    t.integer "status"
+    t.integer "gallery_id"
+    t.integer "offer_type_id"
+    t.integer "floor_id"
+    t.integer "building_id"
+    t.integer "facility_id"
+    t.datetime "published_at"
+    t.integer "price"
+    t.integer "price_type_id"
+    t.integer "square"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "okrugs", force: :cascade do |t|
@@ -81,7 +99,6 @@ ActiveRecord::Schema.define(version: 20180329162442) do
 
   create_table "price_types", force: :cascade do |t|
     t.string "name"
-    t.integer "price_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

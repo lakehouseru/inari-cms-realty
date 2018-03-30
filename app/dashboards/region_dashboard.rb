@@ -51,4 +51,7 @@ class RegionDashboard < Administrate::BaseDashboard
   # def display_resource(region)
   #   "Region ##{region.id}"
   # end
+  def display_resource(item)
+    item.name
+  end
 end

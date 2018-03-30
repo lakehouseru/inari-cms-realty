@@ -8,3 +8,4 @@ ru:
       building:
         name: Название
         description: Описание
+        facility_id: Объект
