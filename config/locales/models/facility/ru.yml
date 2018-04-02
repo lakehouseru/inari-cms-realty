@@ -1,4 +1,10 @@
 ru:
+  :1: A
+  :2: B
+  :3: B+
+  :4: C
+  :5: C+
+  :6: D
   activerecord:
     models:
       facility:

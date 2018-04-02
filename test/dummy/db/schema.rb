@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180402135237) do
+ActiveRecord::Schema.define(version: 20180402151457) do
 
   create_table "building_types", force: :cascade do |t|
     t.string "name"
@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 20180402135237) do
     t.integer "metro_station_id"
     t.integer "okrug_id"
     t.integer "floors"
-    t.integer "level"
+    t.string "level"
     t.integer "distance"
     t.text "description"
     t.integer "user_id"

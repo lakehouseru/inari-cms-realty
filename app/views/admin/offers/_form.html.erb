@@ -14,7 +14,7 @@ and renders all form fields for a resource's editable attributes.
 [1]: http://www.rubydoc.info/gems/administrate/Administrate/Page/Form
 %>
 
-<%= form_for([namespace, page.resource], html: { class: "form" }) do |f| %>
+<%= form_for([namespace, page.resource], html: { class: "form", multipart: true }) do |f| %>
   <% if page.resource.errors.any? %>
     <div id="error_explanation">
       <h2>
@@ -33,11 +33,57 @@ and renders all form fields for a resource's editable attributes.
     </div>
   <% end %>
 
-  <% page.attributes.each do |attribute| -%>
-    <div class="field-unit field-unit--<%= attribute.html_class %>">
-      <%= render_field attribute, f: f %>
+  <%= f.label :name %>
+  <%= f.text_field :name, class: 'form-control' %>
+  <br/>
+  <%= f.label :gallery_id %>
+  <%= f.select :gallery_id, options_from_collection_for_select(Gallery.all, :id, :name, page.resource.gallery_id.to_s ), {}, class: 'form-control' %>
+  
+  <br/>
+
+  <div class="container">
+    <div class="col-md-6">
+      <%= f.label :offer_type_id %>
+      <%= f.select :offer_type_id, options_from_collection_for_select(OfferType.all, :id, :name, page.resource.offer_type_id.to_s ), {}, class: 'form-control' %>
+      <br/>
     </div>
-  <% end -%>
+    <div class="col-md-6">
+      <%= f.label :building_type_id %>
+      <%= f.select :building_type_id, options_from_collection_for_select(BuildingType.all, :id, :name, page.resource.building_type_id.to_s ), {}, class: 'form-control' %>
+      <br/>
+    </div>
+  </div>
+  <%= f.label :facility_id %>
+  <%= f.select :facility_id, options_from_collection_for_select(@facility, :id, :name, page.resource.facility_id.to_s ), {}, class: 'form-control' %>
+  <br/>
+  <%= f.label :building_id %>
+  <%= f.select :building_id, options_from_collection_for_select(Building.all, :id, :name, page.resource.building_id.to_s ), {}, class: 'form-control' %>
+  <br/>
+  <%= f.label :floor_id %>
+  <%= f.select :floor_id, options_from_collection_for_select(@floor, :id, :name, page.resource.floor_id.to_s ), {}, class: 'form-control' %>
+
+  <%= f.label :square %>
+  <%= f.number_field :square, class: 'form-control' %>
+  <br/>
+  <%= f.label :price %>
+  <%= f.number_field :price, class: 'form-control' %>
+  <br/>
+  <%= f.label :price_type_id %>
+  <%= f.select :price_type_id, options_from_collection_for_select(PriceType.all, :id, :name, page.resource.price_type_id.to_s ), {}, class: 'form-control' %>
+  <br/>
+
+  <%= f.label :published_at %>
+  <%= f.date_field :published_at, class: 'form-control' %>
+  <br/>
+
+  <%= f.label :deposit %>
+  <%= f.number_field :deposit, class: 'form-control' %>
+  <br/>
+  <%= f.label :description %>
+  <%= f.cktext_area :description, class: 'form-control', rows: 12 %>
+  <br/>
+  
+  
 
   <div class="form-actions">
     <%= f.submit %>

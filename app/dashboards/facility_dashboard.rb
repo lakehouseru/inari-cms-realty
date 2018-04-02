@@ -19,7 +19,7 @@ class FacilityDashboard < Administrate::BaseDashboard
     square: Field::Number,
     adress: Field::String,
     floors: Field::Number,
-    level: Field::Number,
+    level: SelectField,
     distance: Field::Number,
     description: WysiwygField,
     created_at: Field::DateTime,

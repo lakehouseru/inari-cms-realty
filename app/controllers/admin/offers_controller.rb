@@ -17,5 +17,18 @@ module Admin
 
     # See https://administrate-prototype.herokuapp.com/customizing_controller_actions
     # for more information
+    before_action :require_categories
+
+
+    private
+
+    def require_categories
+      @offer_types = OfferType.all
+      @building_types = BuildingType.all
+      @facility = Facility.all
+      @floor = Floor.all
+      
+    end
+
   end
 end
