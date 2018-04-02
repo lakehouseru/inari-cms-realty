@@ -7,14 +7,15 @@ ru:
     attributes:
       offer:
         name: Название
-        status: Статус
         gallery_id: Галерея
         offer_type_id: Тип предложения
         floor_id: Этаж/Зона
-        building_id: Строение
+        building_id: Строение 
         facility_id: Объект
         published_at: Дата публикации
         price: Цена
         price_type_id: Тип цены
         square: Площадь
         description: Описание
+        building_type_id: Тип помещения
+        deposit: Депозит

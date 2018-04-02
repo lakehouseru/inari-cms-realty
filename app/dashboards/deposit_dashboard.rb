@@ -1,6 +1,6 @@
 require "administrate/base_dashboard"
 
-class OfferDashboard < Administrate::BaseDashboard
+class DepositDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
   # a hash that describes the type of each of the model's fields.
   #
@@ -8,20 +8,8 @@ class OfferDashboard < Administrate::BaseDashboard
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
-    gallery: Field::BelongsTo,
-    building_type: Field::BelongsTo,
-    offer_type: Field::BelongsTo,
-    floor: Field::BelongsTo,
-    building: Field::BelongsTo,
-    facility: Field::BelongsTo,
-    price_type: Field::BelongsTo,
     id: Field::Number,
-    name: Field::String,
     deposit: Field::Number,
-    published_at: Field::DateTime,
-    price: Field::Number,
-    square: Field::Number,
-    description: WysiwygField,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze
@@ -32,28 +20,17 @@ class OfferDashboard < Administrate::BaseDashboard
   # By default, it's limited to four items to reduce clutter on index pages.
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
-    :gallery,
-    :offer_type,
-    :floor,
-    :building,
+    :id,
+    :deposit,
+    :created_at,
+    :updated_at,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = [
-    :name,
-    :gallery,
-    :offer_type,
-    :building_type,
-    :floor,
-    :building,
-    :facility,
-    :published_at,
-    :price,
-    :price_type,
+    :id,
     :deposit,
-    :square,
-    :description,
     :created_at,
     :updated_at,
   ].freeze
@@ -62,28 +39,13 @@ class OfferDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
-    :name,
-    :gallery,
-    :offer_type,
-    :building_type,
-    :floor,
-    :building,
-    :facility,
-    :published_at,
-    :price,
-    :price_type,
     :deposit,
-    :square,
-    :description,
   ].freeze
 
-  # Overwrite this method to customize how offers are displayed
+  # Overwrite this method to customize how deposits are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(offer)
-  #   "Offer ##{offer.id}"
+  # def display_resource(deposit)
+  #   "Deposit ##{deposit.id}"
   # end
-  def display_resource(item)
-    item.name
-  end
 end

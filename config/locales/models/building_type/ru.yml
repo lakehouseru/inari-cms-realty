@@ -1,0 +1,9 @@
+ru:
+  activerecord:
+    models:
+      building_type:
+        one: Тип помещения
+        other: Типы помещений
+    attributes:
+      building_type:
+        name: Название

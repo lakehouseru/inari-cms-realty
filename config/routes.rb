@@ -12,5 +12,6 @@ Rails.application.routes.draw do
 		resources :floors
 		resources :facilities
 		resources :offers
+		resources :building_types
   	end
 end

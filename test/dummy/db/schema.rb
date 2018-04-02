@@ -10,7 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180330115458) do
+ActiveRecord::Schema.define(version: 20180402135237) do
+
+  create_table "building_types", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "buildings", force: :cascade do |t|
     t.string "name"
@@ -76,7 +82,6 @@ ActiveRecord::Schema.define(version: 20180330115458) do
 
   create_table "offers", force: :cascade do |t|
     t.string "name"
-    t.integer "status"
     t.integer "gallery_id"
     t.integer "offer_type_id"
     t.integer "floor_id"
@@ -89,6 +94,8 @@ ActiveRecord::Schema.define(version: 20180330115458) do
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "deposit"
+    t.integer "building_type_id"
   end
 
   create_table "okrugs", force: :cascade do |t|
