@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180402151457) do
+ActiveRecord::Schema.define(version: 20180404093403) do
 
   create_table "building_types", force: :cascade do |t|
     t.string "name"
@@ -34,7 +34,6 @@ ActiveRecord::Schema.define(version: 20180402151457) do
     t.integer "metro_station_id"
     t.integer "okrug_id"
     t.integer "floors"
-    t.string "level"
     t.integer "distance"
     t.text "description"
     t.integer "user_id"
@@ -42,6 +41,8 @@ ActiveRecord::Schema.define(version: 20180402151457) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.datetime "published_at"
+    t.integer "level"
+    t.integer "region_id"
   end
 
   create_table "facility_types", force: :cascade do |t|
@@ -71,6 +72,7 @@ ActiveRecord::Schema.define(version: 20180402151457) do
     t.integer "metro_line_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "facility_id"
   end
 
   create_table "offer_types", force: :cascade do |t|

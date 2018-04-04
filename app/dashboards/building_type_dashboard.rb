@@ -48,4 +48,7 @@ class BuildingTypeDashboard < Administrate::BaseDashboard
   # def display_resource(building_type)
   #   "BuildingType ##{building_type.id}"
   # end
+  def display_resource(item)
+    item.name
+  end
 end

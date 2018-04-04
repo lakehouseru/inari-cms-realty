@@ -1,4 +1,4 @@
 class MetroStation < ApplicationRecord
 	belongs_to :metro_line
-	has_many :facility
+	belongs_to :facility
 end

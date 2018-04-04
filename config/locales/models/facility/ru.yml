@@ -1,10 +1,4 @@
 ru:
-  :1: A
-  :2: B
-  :3: B+
-  :4: C
-  :5: C+
-  :6: D
   activerecord:
     models:
       facility:
@@ -25,3 +19,11 @@ ru:
         user_id: Брокер
         facility_type_id: Тип объекта
         published_at: Дата публикации
+        region_id: Регион
+        levels: 
+          :1: A
+          :2: B
+          :3: B+
+          :4: C
+          :5: C+
+          :6: D

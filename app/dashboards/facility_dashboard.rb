@@ -9,9 +9,10 @@ class FacilityDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     gallery: Field::BelongsTo,
-    metro_station: Field::BelongsTo,
+    metro_station: Field::HasMany,
     okrug: Field::BelongsTo,
     user: Field::BelongsTo,
+    region: Field::BelongsTo,
     facility_type: Field::BelongsTo,
     published_at: Field::DatePicker,
     id: Field::Number,
@@ -63,19 +64,18 @@ class FacilityDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
+    :name,
     :gallery,
+    :adress,
+    :square,
+    :region,
     :metro_station,
     :okrug,
+    :published_at,
     :user,
     :facility_type,
-    :name,
-    :square,
-    :adress,
-    :floors,
     :level,
-    :distance,
     :description,
-    :published_at
   ].freeze
 
   # Overwrite this method to customize how facilities are displayed
