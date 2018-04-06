@@ -42,12 +42,12 @@ and renders all form fields for a resource's editable attributes.
     </div>
   </div>
 
-  <div class="field-unit field-unit--belongs-to">
+  <div class="field-unit field-unit--has-many">
     <div class="field-unit__label">
       <%= f.label :gallery_id %>
     </div>
     <div class="field-unit__field">
-      <%= f.select :gallery_id, options_from_collection_for_select(Gallery.all, :id, :name, page.resource.gallery_id.to_s ), {}, class: 'form-control' %>
+      <%= f.select :gallery_id, options_from_collection_for_select(Gallery.all, :id, :name, page.resource.gallery_id.to_s ), {include_blank: true}, class: 'form-control' %>
     </div>
   </div>
   
@@ -69,12 +69,12 @@ and renders all form fields for a resource's editable attributes.
     </div>
   </div>
 
-  <div class="field-unit field-unit--belongs-to">
+  <div class="field-unit field-unit--has-many">
     <div class="field-unit__label">
       <%= f.label :region_id %>
     </div>
     <div class="field-unit__field">
-      <%= f.select :region_id, options_from_collection_for_select(Region.all, :id, :name, page.resource.region_id.to_s ), {}, class: 'form-control' %>
+      <%= f.select :region_id, options_from_collection_for_select(Region.all, :id, :name, page.resource.region_id.to_s ), {include_blank: true}, class: 'form-control' %>
       </div>
   </div>
 
@@ -83,16 +83,16 @@ and renders all form fields for a resource's editable attributes.
       <%= f.label :metro_station_id %>
     </div>
     <div class="field-unit__field">
-      <%= f.select :metro_station_id, options_from_collection_for_select(MetroStation.all, :id, :name, page.resource.metro_station_id.to_s ), {}, class: 'form-control' %>
+      <%= f.select :metro_station_id, options_from_collection_for_select(MetroStation.all, :id, :name, page.resource.metro_station_id.to_s ), {}, :multiple => true, class: 'form-control selectized' %>
     </div>
   </div>
 
-  <div class="field-unit field-unit--belongs-to">
+  <div class="field-unit field-unit--has-many">
     <div class="field-unit__label">
       <%= f.label :okrug_id %>
     </div>
     <div class="field-unit__field">
-      <%= f.select :okrug_id, options_from_collection_for_select(Okrug.all, :id, :name, page.resource.okrug_id.to_s ), {}, class: 'form-control' %>
+      <%= f.select :okrug_id, options_from_collection_for_select(Okrug.all, :id, :name, page.resource.okrug_id.to_s ), {include_blank: true}, class: 'form-control' %>
     </div>
   </div>
 
@@ -105,30 +105,30 @@ and renders all form fields for a resource's editable attributes.
     </div>
   </div>
 
-  <div class="field-unit field-unit--belongs-to">
+  <div class="field-unit field-unit--has-many">
     <div class="field-unit__label">
       <%= f.label :user_id %>
     </div>
     <div class="field-unit__field">
-      <%= f.select :user_id, options_from_collection_for_select(User.all, :id, :fio, page.resource.user_id.to_s ), {}, class: 'form-control' %>
+      <%= f.select :user_id, options_from_collection_for_select(User.all, :id, :fio, page.resource.user_id.to_s ), {include_blank: true}, class: 'form-control' %>
     </div>
   </div>
 
-  <div class="field-unit field-unit--belongs-to">
+  <div class="field-unit field-unit--has-many">
     <div class="field-unit__label">
       <%= f.label :facility_type_id %>
     </div>
     <div class="field-unit__field">
-      <%= f.select :facility_type_id, options_from_collection_for_select(FacilityType.all, :id, :name, page.resource.facility_type_id.to_s ), {}, class: 'form-control' %>
+      <%= f.select :facility_type_id, options_from_collection_for_select(FacilityType.all, :id, :name, page.resource.facility_type_id.to_s ), {include_blank: true}, class: 'form-control' %>
     </div>
   </div>
 
-  <div class="field-unit field-unit--select-field">
+  <div class="field-unit field-unit--has-many">
     <div class="field-unit__label">
       <%= f.label :level %>
     </div>
     <div class="field-unit__field">
-      <%= f.select :level, Facility.levels.keys.map {|key| [I18n.t("activerecord.attributes.facility.levels.#{key}"), key]}, class: 'form-control' %>
+      <%= f.select :level, Facility.levels.keys.map {|key| [I18n.t("activerecord.attributes.facility.levels.#{key}"), key]}, {include_blank: true}, class: 'form-control' %>
     </div>
   </div>
 

@@ -42,57 +42,57 @@ and renders all form fields for a resource's editable attributes.
     </div>
   </div>
 
-  <div class="field-unit field-unit--belongs-to">
+  <div class="field-unit field-unit--has-many">
     <div class="field-unit__label">
       <%= f.label :gallery_id %>
     </div>
     <div class="field-unit__field">
-      <%= f.select :gallery_id, options_from_collection_for_select(Gallery.all, :id, :name, page.resource.gallery_id.to_s ), {}, class: 'form-control' %>
+      <%= f.select :gallery_id, options_from_collection_for_select(Gallery.all, :id, :name, page.resource.gallery_id.to_s ), {include_blank: true}, class: 'form-control' %>
     </div>
   </div>
   
-  <div class="field-unit field-unit--belongs-to">
+  <div class="field-unit field-unit--has-many">
     <div class="field-unit__label">
       <%= f.label :offer_type_id %>
     </div>
     <div class="field-unit__field">
-      <%= f.select :offer_type_id, options_from_collection_for_select(OfferType.all, :id, :name, page.resource.offer_type_id.to_s ), {}, class: 'form-control' %>
+      <%= f.select :offer_type_id, options_from_collection_for_select(OfferType.all, :id, :name, page.resource.offer_type_id.to_s ), {include_blank: true}, class: 'form-control' %>
     </div>
   </div>
 
-  <div class="field-unit field-unit--belongs-to">
+  <div class="field-unit field-unit--has-many">
     <div class="field-unit__label">
       <%= f.label :building_type_id %>
     </div>
     <div class="field-unit__field">
-      <%= f.select :building_type_id, options_from_collection_for_select(BuildingType.all, :id, :name, page.resource.building_type_id.to_s ), {}, class: 'form-control' %>
+      <%= f.select :building_type_id, options_from_collection_for_select(BuildingType.all, :id, :name, page.resource.building_type_id.to_s ), {include_blank: true}, class: 'form-control' %>
     </div>
   </div>
 
-  <div class="field-unit field-unit--belongs-to">
+  <div class="field-unit field-unit--has-many">
     <div class="field-unit__label">
       <%= f.label :facility_id %>
     </div>
     <div class="field-unit__field">
-      <%= f.select :facility_id, options_from_collection_for_select(@facility, :id, :name, page.resource.facility_id.to_s ), {}, class: 'form-control' %>
+      <%= f.select :facility_id, options_from_collection_for_select(@facility, :id, :name, page.resource.facility_id.to_s ), {include_blank: true}, class: 'form-control' %>
       </div>
   </div>
 
-  <div class="field-unit field-unit--belongs-to">
+  <div class="field-unit field-unit--has-many">
     <div class="field-unit__label">
       <%= f.label :building_id %>
     </div>
     <div class="field-unit__field">
-      <%= f.select :building_id, options_from_collection_for_select(Building.all, :id, :name, page.resource.building_id.to_s ), {}, class: 'form-control' %>
+      <%= f.select :building_id, options_from_collection_for_select(Building.all, :id, :name, page.resource.building_id.to_s ), {include_blank: true}, class: 'form-control' %>
     </div>
   </div>
 
-  <div class="field-unit field-unit--belongs-to">
+  <div class="field-unit field-unit--has-many">
     <div class="field-unit__label">
       <%= f.label :floor_id %>
     </div>
     <div class="field-unit__field">
-      <%= f.select :floor_id, options_from_collection_for_select(@floor, :id, :name, page.resource.floor_id.to_s ), {}, class: 'form-control' %>
+      <%= f.select :floor_id, options_from_collection_for_select(@floor, :id, :name, page.resource.floor_id.to_s ), {include_blank: true}, class: 'form-control' %>
     </div>
   </div>
 
@@ -114,12 +114,12 @@ and renders all form fields for a resource's editable attributes.
     </div>
   </div>
 
-  <div class="field-unit field-unit--belongs-to">
+  <div class="field-unit field-unit--has-many">
     <div class="field-unit__label">
       <%= f.label :price_type_id %>
     </div>
     <div class="field-unit__field">
-      <%= f.select :price_type_id, options_from_collection_for_select(PriceType.all, :id, :name, page.resource.price_type_id.to_s ), {}, class: 'form-control' %>
+      <%= f.select :price_type_id, options_from_collection_for_select(PriceType.all, :id, :name, page.resource.price_type_id.to_s ), {include_blank: true}, class: 'form-control' %>
     </div>
   </div>
 
