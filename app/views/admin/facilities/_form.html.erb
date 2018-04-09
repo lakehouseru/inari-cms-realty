@@ -62,6 +62,15 @@ and renders all form fields for a resource's editable attributes.
 
   <div class="field-unit field-unit--number">
     <div class="field-unit__label">
+      <%= f.label :square_gla %>
+    </div>
+    <div class="field-unit__field">
+      <%= f.number_field :square_gla, class: 'form-control' %>
+    </div>
+  </div>
+
+  <div class="field-unit field-unit--number">
+    <div class="field-unit__label">
       <%= f.label :square %>
     </div>
     <div class="field-unit__field">

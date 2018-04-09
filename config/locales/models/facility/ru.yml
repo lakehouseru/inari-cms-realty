@@ -9,6 +9,7 @@ ru:
         name: Название
         gallery_id: Галерея
         square: Площадь общая
+        square_gla: Доступная площадь
         adress: Адрес
         metro_station_id: Станция метро
         okrug_id: Округ

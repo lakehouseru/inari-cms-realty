@@ -2,8 +2,8 @@ ru:
   activerecord:
     models:
       facility_type:
-        one: Тип адреса
-        other: Типы адресов
+        one: Тип объекта
+        other: Типы объектов
     attributes:
       facility_type:
         name: Название
