@@ -51,95 +51,130 @@ and renders all form fields for a resource's editable attributes.
     </div>
   </div>
   
-  <div class="field-unit field-unit--has-many">
-    <div class="field-unit__label">
-      <%= f.label :offer_type_id %>
-    </div>
-    <div class="field-unit__field">
-      <%= f.select :offer_type_id, options_from_collection_for_select(OfferType.all, :id, :name, page.resource.offer_type_id.to_s ), {include_blank: true}, class: 'form-control' %>
-    </div>
-  </div>
+   <table  class="inform" border="0" cellpadding="1" cellspacing="1">
+    <tbody>
+      <tbody>
+          <tr>
+            <td class="td-label">
+              <div class="field-unit__label">
+                <%= f.label :offer_type_id %>
+              </div>
+            </td>
+            <td class="td-field">
+              <div class="field-unit__field field-unit--has-many">
+                <%= f.select :offer_type_id, options_from_collection_for_select(OfferType.all, :id, :name, page.resource.offer_type_id.to_s ), {include_blank: true}, class: 'form-control' %>
+              </div>
+            </td>
 
-  <div class="field-unit field-unit--has-many">
-    <div class="field-unit__label">
-      <%= f.label :building_type_id %>
-    </div>
-    <div class="field-unit__field">
-      <%= f.select :building_type_id, options_from_collection_for_select(BuildingType.all, :id, :name, page.resource.building_type_id.to_s ), {include_blank: true}, class: 'form-control' %>
-    </div>
-  </div>
+            <td class="td-label">
+              <div class="field-unit__label">
+                <%= f.label :building_type_id %>
+              </div>
+            </td>
+            <td class="td-field">
+              <div class="field-unit__field field-unit--has-many">
+                <%= f.select :building_type_id, options_from_collection_for_select(BuildingType.all, :id, :name, page.resource.building_type_id.to_s ), {include_blank: true}, class: 'form-control' %>
+              </div>
+            </td>
+          </tr>
 
-  <div class="field-unit field-unit--has-many">
-    <div class="field-unit__label">
-      <%= f.label :facility_id %>
-    </div>
-    <div class="field-unit__field">
-      <%= f.select :facility_id, options_from_collection_for_select(@facility, :id, :name, page.resource.facility_id.to_s ), {include_blank: true}, class: 'form-control' %>
-      </div>
-  </div>
+          <tr>  
+            <td class="td-label">
+              <div class="field-unit__label">
+                <%= f.label :facility_id %>
+              </div>
+            </td>
+            <td class="td-field">
+              <div class="field-unit__field field-unit--has-many">
+                <%= f.select :facility_id, options_from_collection_for_select(@facility, :id, :name, page.resource.facility_id.to_s ), {include_blank: true}, class: 'form-control' %>
+                </div>
+            </td>
 
-  <div class="field-unit field-unit--has-many">
-    <div class="field-unit__label">
-      <%= f.label :building_id %>
-    </div>
-    <div class="field-unit__field">
-      <%= f.select :building_id, options_from_collection_for_select(Building.all, :id, :name, page.resource.building_id.to_s ), {include_blank: true}, class: 'form-control' %>
-    </div>
-  </div>
+            <td class="td-label">
+              <div class="field-unit__label">
+                <%= f.label :building_id %>
+              </div>
+            </td>
+            <td class="td-field">
+              <div class="field-unit__field field-unit--has-many">
+                <%= f.select :building_id, options_from_collection_for_select(Building.all, :id, :name, page.resource.building_id.to_s ), {include_blank: true}, class: 'form-control' %>
+              </div>
+            </td>
+          </tr>
 
-  <div class="field-unit field-unit--has-many">
-    <div class="field-unit__label">
-      <%= f.label :floor_id %>
-    </div>
-    <div class="field-unit__field">
-      <%= f.select :floor_id, options_from_collection_for_select(@floor, :id, :name, page.resource.floor_id.to_s ), {include_blank: true}, class: 'form-control' %>
-    </div>
-  </div>
+          <tr>  
+            <td class="td-label">
+              <div class="field-unit__label">
+                <%= f.label :floor_id %>
+              </div>
+            </td>
+            <td class="td-field">
+              <div class="field-unit__field field-unit--has-many">
+                <%= f.select :floor_id, options_from_collection_for_select(@floor, :id, :name, page.resource.floor_id.to_s ), {include_blank: true}, class: 'form-control' %>
+              </div>
+            </td>
 
-  <div class="field-unit field-unit--number">
-    <div class="field-unit__label">
-      <%= f.label :square %>
-    </div>
-    <div class="field-unit__field">
-      <%= f.number_field :square, class: 'form-control' %>
-    </div>
-  </div>
+            <td class="td-label">
+              <div class="field-unit__label">
+                <%= f.label :square %>
+              </div>
+            </td>
+            <td class="td-field">
+              <div class="field-unit__field field-unit--number">
+                <%= f.number_field :square, class: 'form-control' %>
+              </div>
+            </td>
+          </tr>
 
-  <div class="field-unit field-unit--number">
-    <div class="field-unit__label">
-      <%= f.label :price %>
-    </div>
-    <div class="field-unit__field">
-      <%= f.number_field :price, class: 'form-control' %>
-    </div>
-  </div>
+          <tr>  
+            <td class="td-label">
+              <div class="field-unit__label">
+                <%= f.label :price %>
+              </div>
+            </td>
+            <td class="td-field">
+              <div class="field-unit__field field-unit--number">
+                <%= f.number_field :price, class: 'form-control' %>
+              </div>
+            </td>
 
-  <div class="field-unit field-unit--has-many">
-    <div class="field-unit__label">
-      <%= f.label :price_type_id %>
-    </div>
-    <div class="field-unit__field">
-      <%= f.select :price_type_id, options_from_collection_for_select(PriceType.all, :id, :name, page.resource.price_type_id.to_s ), {include_blank: true}, class: 'form-control' %>
-    </div>
-  </div>
+            <td class="td-label">
+              <div class="field-unit__label">
+                <%= f.label :price_type_id %>
+              </div>
+            </td>
+            <td class="td-field">
+              <div class="field-unit__field field-unit--has-many">
+                <%= f.select :price_type_id, options_from_collection_for_select(PriceType.all, :id, :name, page.resource.price_type_id.to_s ), {include_blank: true}, class: 'form-control' %>
+              </div>
+            </td>
+          </tr>
 
-  <div class="field-unit field-unit--date-picker">
-    <div class="field-unit__label">
-      <%= f.label :published_at %>
-    </div>
-    <div class="field-unit__field">
-      <%= f.date_field :published_at, class: 'date_picker flatpickr-input' %>
-    </div>
-  </div>
+          <tr>  
+            <td class="td-label">
+              <div class="field-unit__label">
+                <%= f.label :published_at %>
+              </div>
+            </td>
+            <td class="td-field">
+              <div class="field-unit__field field-unit--date-picker">
+                <%= f.date_field :published_at, class: 'date_picker flatpickr-input' %>
+              </div>
+            </td>
 
-  <div class="field-unit field-unit--number">
-    <div class="field-unit__label">
-      <%= f.label :deposit %>
-    </div>
-    <div class="field-unit__field">
-      <%= f.number_field :deposit, class: 'form-control' %>
-    </div>
-  </div>
+            <td class="td-label">
+              <div class="field-unit__label">
+                <%= f.label :deposit %>
+              </div>
+            </td>
+            <td class="td-field">
+              <div class="field-unit__field field-unit--number">
+                <%= f.number_field :deposit, class: 'form-control' %>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
 
   <div class="field-unit field-unit--wysiwyg-field">
     <div class="field-unit__label">

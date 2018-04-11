@@ -33,6 +33,7 @@ and renders all form fields for a resource's editable attributes.
     </div>
   <% end %>
 
+
   <div class="field-unit field-unit--string">
     <div class="field-unit__label">
       <%= f.label :name %>
@@ -60,77 +61,106 @@ and renders all form fields for a resource's editable attributes.
     </div>
   </div>
 
-  <div class="field-unit field-unit--number">
-    <div class="field-unit__label">
-      <%= f.label :square_gla %>
-    </div>
-    <div class="field-unit__field">
-      <%= f.number_field :square_gla, class: 'form-control' %>
-    </div>
-  </div>
+  <table  class="inform" border="0" cellpadding="1" cellspacing="1">
+    <tbody>
+      <tbody>
+          <tr>
+            <td class="td-label">
+              <div class="field-unit__label">
+                <%= f.label :square_gla %>
+              </div>
+            </td>
+            <td class="td-field">
+              <div class="field-unit__field field-unit--number">
+                <%= f.number_field :square_gla, class: 'form-control' %>
+              </div>
+            </td>
 
-  <div class="field-unit field-unit--number">
-    <div class="field-unit__label">
-      <%= f.label :square %>
-    </div>
-    <div class="field-unit__field">
-      <%= f.number_field :square, class: 'form-control' %>
-    </div>
-  </div>
+            <td class="td-label">
+              <div class="field-unit__label">
+                <%= f.label :square %>
+              </div>
+            </td>
+            <td class="td-field">
+              <div class="field-unit__field field-unit--number">
+                <%= f.number_field :square, class: 'form-control' %>
+              </div>
+            </td>
+          </tr>
 
-  <div class="field-unit field-unit--has-many">
-    <div class="field-unit__label">
-      <%= f.label :region_id %>
-    </div>
-    <div class="field-unit__field">
-      <%= f.select :region_id, options_from_collection_for_select(Region.all, :id, :name, page.resource.region_id.to_s ), {include_blank: true}, class: 'form-control' %>
-      </div>
-  </div>
+          <tr>
+            <td class="td-label">
+              <div class="field-unit__label">
+                <%= f.label :region_id %>
+              </div>
+            </td>
+            <td class="td-field">
+              <div class="field-unit__field field-unit--has-many">
+                <%= f.select :region_id, options_from_collection_for_select(Region.all, :id, :name, page.resource.region_id.to_s ), {include_blank: true}, class: 'form-control' %>
+                </div>
+            </td>
 
-  <div class="field-unit field-unit--has-many">
-    <div class="field-unit__label">
-      <%= f.label :metro_station_id %>
-    </div>
-    <div class="field-unit__field">
-      <%= f.select :metro_station_id, options_from_collection_for_select(MetroStation.all, :id, :name, page.resource.metro_station_id.to_s ), {}, :multiple => true, class: 'form-control selectized' %>
-    </div>
-  </div>
+            <td class="td-label">
+              <div class="field-unit__label">
+                <%= f.label :metro_station_id %>
+              </div>
+            </td>
+            <td class="td-field">
+              <div class="field-unit__field field-unit--has-many">
+                <%= f.select :metro_station_id, options_from_collection_for_select(MetroStation.all, :id, :name, page.resource.metro_station_id.to_s ), {}, :multiple => true, class: 'form-control selectized' %>
+              </div>
+            </td>
+          </tr>
 
-  <div class="field-unit field-unit--has-many">
-    <div class="field-unit__label">
-      <%= f.label :okrug_id %>
-    </div>
-    <div class="field-unit__field">
-      <%= f.select :okrug_id, options_from_collection_for_select(Okrug.all, :id, :name, page.resource.okrug_id.to_s ), {include_blank: true}, class: 'form-control' %>
-    </div>
-  </div>
+          <tr>
+            <td class="td-label">
+              <div class="field-unit__label">
+                <%= f.label :okrug_id %>
+              </div>
+            </td>
+            <td class="td-field">
+              <div class="field-unit__field field-unit--has-many">
+                <%= f.select :okrug_id, options_from_collection_for_select(Okrug.all, :id, :name, page.resource.okrug_id.to_s ), {include_blank: true}, class: 'form-control' %>
+              </div>
+            </td>
 
-  <div class="field-unit field-unit--date-picker">
-    <div class="field-unit__label">
-      <%= f.label :published_at %>
-    </div>
-    <div class="field-unit__field">
-      <%= f.date_field :published_at, class: 'date_picker flatpickr-input' %>
-    </div>
-  </div>
+            <td class="td-label">
+              <div class="field-unit__label">
+                <%= f.label :published_at %>
+              </div>
+            </td>
+            <td class="td-field">
+              <div class="field-unit__field field-unit--date-picker">
+                <%= f.date_field :published_at, class: 'date_picker flatpickr-input' %>
+              </div>
+            </td>
+          </tr>
 
-  <div class="field-unit field-unit--has-many">
-    <div class="field-unit__label">
-      <%= f.label :user_id %>
-    </div>
-    <div class="field-unit__field">
-      <%= f.select :user_id, options_from_collection_for_select(User.all, :id, :fio, page.resource.user_id.to_s ), {include_blank: true}, class: 'form-control' %>
-    </div>
-  </div>
+          <tr>
+            <td class="td-label">
+              <div class="field-unit__label">
+                <%= f.label :user_id %>
+              </div>
+            </td>
+            <td class="td-field">
+              <div class="field-unit__field field-unit--has-many">
+                <%= f.select :user_id, options_from_collection_for_select(User.all, :id, :fio, page.resource.user_id.to_s ), {include_blank: true}, class: 'form-control' %>
+              </div>
+            </td>
 
-  <div class="field-unit field-unit--has-many">
-    <div class="field-unit__label">
-      <%= f.label :facility_type_id %>
-    </div>
-    <div class="field-unit__field">
-      <%= f.select :facility_type_id, options_from_collection_for_select(FacilityType.all, :id, :name, page.resource.facility_type_id.to_s ), {include_blank: true}, class: 'form-control' %>
-    </div>
-  </div>
+            <td class="td-label">
+              <div class="field-unit__label">
+                <%= f.label :facility_type_id %>
+              </div>
+            </td>
+            <td class="td-field">
+              <div class="field-unit__field field-unit--has-many">
+                <%= f.select :facility_type_id, options_from_collection_for_select(FacilityType.all, :id, :name, page.resource.facility_type_id.to_s ), {include_blank: true}, class: 'form-control' %>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
 
   <div class="field-unit field-unit--has-many">
     <div class="field-unit__label">

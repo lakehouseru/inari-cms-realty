@@ -44,3 +44,31 @@
     }
   }
 }
+
+table.inform {
+  margin-bottom: 1.5em;
+  border-collapse: inherit;
+  font-size: 1em;
+  td {
+    .field-unit__label {
+      width: calc(95% - 1rem);
+      margin-left: 0;
+    }
+    .field-unit__field {
+      width: 90%;
+      margin-left: 0;
+    }
+  }
+  td.td-label {
+    padding-right: 0;
+  }
+  td.td-field {
+    padding-left: 0;
+  }
+  td:first-child, th:first-child {
+    padding-left: 0;
+  }
+  tr:hover {
+    background-color: inherit;
+  }
+}
