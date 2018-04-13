@@ -107,7 +107,7 @@ and renders all form fields for a resource's editable attributes.
             </td>
             <td class="td-field">
               <div class="field-unit__field field-unit--has-many">
-                <%= f.select :metro_station_id, options_from_collection_for_select(MetroStation.all, :id, :name, page.resource.metro_station_id.to_s ), {}, :multiple => true, class: 'form-control selectized' %>
+                <%= f.select :metro_station_ids, options_from_collection_for_select(MetroStation.all, :id, :name, page.resource.metro_station_id.to_s ), {}, :multiple => true, class: 'form-control selectized' %>
               </div>
             </td>
           </tr>
