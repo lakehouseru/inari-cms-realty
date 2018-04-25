@@ -102,7 +102,7 @@ and renders all form fields for a resource's editable attributes.
 
             <td class="td-label">
               <div class="field-unit__label">
-                <%= f.label :metro_station_id %>
+                <%= f.label :metro_station_ids %>
               </div>
             </td>
             <td class="td-field">
@@ -159,17 +159,31 @@ and renders all form fields for a resource's editable attributes.
               </div>
             </td>
           </tr>
+          <tr>
+            <td class="td-label">
+              <div class="field-unit__label">
+                <%= f.label :level %>
+              </div>
+            </td>
+            <td class="td-field">
+              <div class="field-unit__field field-unit--has-many">
+                <%= f.select :level, Facility.levels.keys.map {|key| [I18n.t("activerecord.attributes.facility.levels.#{key}"), key]}, {include_blank: true}, class: 'form-control' %>
+              </div>
+            </td>
+
+            <td class="td-label">
+              <div class="field-unit__label">
+                <%= f.label :offer_id %>
+              </div>
+            </td>
+            <td class="td-field">
+              <div class="field-unit__field field-unit--has-many">
+                <%= f.select :offer_ids, options_from_collection_for_select(Offer.all, :id, :name, page.resource.offer_id.to_s ), {include_blank: true}, :multiple => true, class: 'form-control' %>
+              </div>
+            </td>
+          </tr>
         </tbody>
       </table>
-
-  <div class="field-unit field-unit--has-many">
-    <div class="field-unit__label">
-      <%= f.label :level %>
-    </div>
-    <div class="field-unit__field">
-      <%= f.select :level, Facility.levels.keys.map {|key| [I18n.t("activerecord.attributes.facility.levels.#{key}"), key]}, {include_blank: true}, class: 'form-control' %>
-    </div>
-  </div>
 
   <div class="field-unit field-unit--wysiwyg-field">
     <div class="field-unit__label">

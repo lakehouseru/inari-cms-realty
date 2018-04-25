@@ -11,7 +11,7 @@ ru:
         square: Площадь общая
         square_gla: Доступная площадь
         adress: Адрес
-        metro_station_id: Станция метро
+        metro_station_ids: Станция метро
         okrug_id: Округ
         floors: Этажность
         level: Класс
@@ -21,6 +21,7 @@ ru:
         facility_type_id: Тип объекта
         published_at: Дата публикации
         region_id: Регион
+        offer_id: Лоты
         levels: 
           :1: A
           :2: B
