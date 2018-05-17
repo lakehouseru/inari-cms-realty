@@ -1,6 +1,6 @@
 class MetroStation < ApplicationRecord
 	belongs_to :metro_line
-	belongs_to :facility
+	has_and_belongs_to_many :facilities
 
 	validates :name, :metro_line,  presence: true
 	validates :name, uniqueness: true

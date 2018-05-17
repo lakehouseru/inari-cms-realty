@@ -1,5 +1,5 @@
 class MetroLine < ApplicationRecord
-	has_many :metro_station
+	has_many :metro_stations
 
 	validates :name, :color,  presence: true
 	validates :name, uniqueness: true
