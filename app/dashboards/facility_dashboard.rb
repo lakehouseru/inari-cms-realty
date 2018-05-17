@@ -9,7 +9,7 @@ class FacilityDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     gallery: Field::BelongsTo,
-    metro_station: Field::HasMany,
+    metro_stations: Field::HasMany,
     okrug: Field::BelongsTo,
     user: Field::BelongsTo,
     region: Field::BelongsTo,
@@ -34,7 +34,7 @@ class FacilityDashboard < Administrate::BaseDashboard
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
     :gallery,
-    :metro_station,
+    :metro_stations,
     :okrug,
     :user,
   ].freeze
@@ -43,7 +43,7 @@ class FacilityDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = [
     :gallery,
-    :metro_station,
+    :metro_stations,
     :okrug,
     :user,
     :facility_type,
@@ -70,7 +70,7 @@ class FacilityDashboard < Administrate::BaseDashboard
     :square,
     :square_gla,
     :region,
-    :metro_station,
+    :metro_stations,
     :okrug,
     :published_at,
     :user,
