@@ -9,7 +9,7 @@ class MetroStationDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     metro_line: Field::BelongsTo,
-    facility: Field::BelongsTo,
+    facilities: Field::HasMany,
     id: Field::Number,
     name: Field::String,
     created_at: Field::DateTime,

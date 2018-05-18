@@ -1,6 +1,6 @@
 class Facility < ApplicationRecord
 	belongs_to :gallery
-	has_many :metro_station
+	has_and_belongs_to_many :metro_stations
 	belongs_to :okrug
 	belongs_to :user
 	belongs_to :region
