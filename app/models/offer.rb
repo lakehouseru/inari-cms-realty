@@ -7,6 +7,6 @@ class Offer < ApplicationRecord
 	belongs_to :facility
 	belongs_to :price_type
 
-	validates :name, :gallery, :offer_type, :floor, :price, :price_type, :square, :building, :facility,  presence: true
+	validates :name, :gallery, :offer_type, :floor, :price, :price_type, :square, :building, :facility_id,  presence: true
 	validates :name, uniqueness: true
 end
