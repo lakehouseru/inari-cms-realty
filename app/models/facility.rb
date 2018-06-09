@@ -13,4 +13,8 @@ class Facility < ApplicationRecord
 	validates :name, :gallery, :adress, :square_gla, :square, :okrug, :facility_type, :user,  presence: true
 	validates :name, uniqueness: true
 
+  geocoded_by :adress
+
+  after_validation :geocode
+
 end

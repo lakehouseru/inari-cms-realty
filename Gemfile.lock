@@ -3,6 +3,7 @@ PATH
   specs:
     inari-cms-realty (0.1.0)
       administrate
+      geocoder
       rails (~> 5.1.5)
 
 GEM
@@ -74,6 +75,7 @@ GEM
     erubi (1.7.1)
     execjs (2.7.0)
     ffi (1.9.23)
+    geocoder (1.4.9)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     i18n (0.9.5)
@@ -105,7 +107,7 @@ GEM
     minitest (5.11.3)
     momentjs-rails (2.20.1)
       railties (>= 3.1)
-    nio4r (2.3.0)
+    nio4r (2.3.1)
     nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
     orm_adapter (0.5.0)
