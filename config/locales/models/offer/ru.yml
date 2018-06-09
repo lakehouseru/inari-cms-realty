@@ -4,6 +4,7 @@ ru:
       offer:
         one: Лот
         other: Лоты
+        few: Лоты
     attributes:
       offer:
         name: Название
