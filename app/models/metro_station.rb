@@ -3,5 +3,4 @@ class MetroStation < ApplicationRecord
 	has_and_belongs_to_many :facilities
 
 	validates :name, :metro_line,  presence: true
-	validates :name, uniqueness: true
 end
