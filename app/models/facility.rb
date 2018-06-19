@@ -22,5 +22,8 @@ class Facility < ApplicationRecord
 
   after_validation :geocode
 
-
+  def key_image
+    gallery.gallery_attachments.order(:sort).first.image || false
+  end
+  
 end

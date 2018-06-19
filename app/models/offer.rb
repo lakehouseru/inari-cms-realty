@@ -11,7 +11,7 @@ class Offer < ApplicationRecord
 	validates :name, uniqueness: true
 
   with_options prefix: true, allow_nil: false do
-    delegate :name, :adress, :facility_type_name, :level,  to: :facility
+    delegate :name, :adress, :facility_type_name, :level, :okrug, :region,  to: :facility
     delegate :name,                                         to: :floor
   end
 
@@ -27,4 +27,9 @@ class Offer < ApplicationRecord
   def metro_stations_titles
     facility.metro_stations.pluck(:name)
   end
+
+  def neighbour_offers
+    facility.offers.where.not(id:id)
+  end
+
 end
