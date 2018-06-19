@@ -10,7 +10,7 @@ class MetroLineDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     id: Field::Number,
     name: Field::String,
-    color: Field::String,
+    color: ColorField,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze

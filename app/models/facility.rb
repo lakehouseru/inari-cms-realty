@@ -6,11 +6,15 @@ class Facility < ApplicationRecord
 	belongs_to :region
 	belongs_to :facility_type
 	has_many :building
-	has_many :offer
+	has_many :offers
 
 	enum level: ['1', '2', '3', '4', '5', '6']
 
 	validates :name, :gallery, :adress, :square_gla, :square, :okrug, :facility_type, :user,  presence: true
 	validates :name, uniqueness: true
+
+	with_options prefix: true, allow_nil: false do
+    delegate :name,         to: :facility_type
+  end
 
 end
