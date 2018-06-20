@@ -10,7 +10,7 @@ class Facility < ApplicationRecord
 
 	enum level: ['1', '2', '3', '4', '5', '6']
 
-	validates :name, :gallery, :adress, :square_gla, :square, :okrug, :facility_type, :user,  presence: true
+	validates :name, :gallery, :adress, :square_gla, :square, :facility_type, :user,  presence: true
 
 
 	with_options prefix: true, allow_nil: false do
