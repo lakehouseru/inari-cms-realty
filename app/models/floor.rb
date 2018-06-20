@@ -3,5 +3,4 @@ class Floor < ApplicationRecord
 	has_many :offer
 
 	validates :building, :name,  presence: true
-	validates :name, uniqueness: true
 end

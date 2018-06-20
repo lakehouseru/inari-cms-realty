@@ -4,5 +4,4 @@ class Building < ApplicationRecord
 	has_many :offer
 
 	validates :name, :facility,  presence: true
-	validates :name, uniqueness: true
 end

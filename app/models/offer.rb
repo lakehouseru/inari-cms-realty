@@ -8,7 +8,6 @@ class Offer < ApplicationRecord
 	belongs_to :price_type
 
 	validates :name, :gallery, :offer_type, :floor, :price, :price_type, :square, :building, :facility_id,  presence: true
-	validates :name, uniqueness: true
 
   with_options prefix: true, allow_nil: false do
     delegate :name, :adress, :facility_type_name, :level, :okrug, :region,  to: :facility
