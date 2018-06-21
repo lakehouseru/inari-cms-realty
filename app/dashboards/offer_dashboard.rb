@@ -17,7 +17,7 @@ class OfferDashboard < Administrate::BaseDashboard
     price_type: Field::BelongsTo,
     id: Field::Number,
     name: Field::String,
-    deposit: Field::Number,
+    deposit: Field::String,
     published_at: Field::DateTime,
     price: Field::Number,
     square: Field::Number,

@@ -35,7 +35,6 @@ class FacilityDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = [
     :gallery,
     :metro_stations,
-    :okrug,
     :user,
   ].freeze
 
