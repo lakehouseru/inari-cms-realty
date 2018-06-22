@@ -21,8 +21,13 @@ class Facility < ApplicationRecord
 
   after_validation :geocode
 
+  before_destroy :clear_stations
+
   def key_image
     gallery.gallery_attachments.order(:sort).first.image || false
-  end
-  
+	end
+
+  def clear_stations
+		metro_stations.clear
+	end
 end
