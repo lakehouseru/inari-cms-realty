@@ -11,7 +11,8 @@ class Offer < ApplicationRecord
 
   with_options prefix: true, allow_nil: false do
     delegate :name, :adress, :facility_type_name, :level, :okrug, :region,  to: :facility
-    delegate :name,                                         to: :floor
+    delegate :name,                                                         to: :floor
+    delegate :name,                                                         to: :building_type
   end
 
 
