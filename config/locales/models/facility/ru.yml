@@ -22,6 +22,7 @@ ru:
         published_at: Дата публикации
         region_id: Регион
         offer_id: Лоты
+        files: Файлы
         levels: 
           :1: A
           :2: B

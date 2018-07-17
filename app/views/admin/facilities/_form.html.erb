@@ -61,6 +61,15 @@ and renders all form fields for a resource's editable attributes.
     </div>
   </div>
 
+  <div class="field-unit field-unit--has-many">
+    <div class="field-unit__label">
+      <%= f.label :files %>
+    </div>
+    <div class="field-unit__field">
+      <%= f.file_field :files, multiple: true, class: 'form-control' %>
+    </div>
+  </div>
+
   <table  class="inform" border="0" cellpadding="1" cellspacing="1">
     <tbody>
       <tbody>

@@ -25,6 +25,7 @@ class FacilityDashboard < Administrate::BaseDashboard
     description: WysiwygField,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
+    files: FileField
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -35,7 +36,7 @@ class FacilityDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = [
     :gallery,
     :metro_stations,
-    :user,
+    :user
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -57,6 +58,7 @@ class FacilityDashboard < Administrate::BaseDashboard
     :published_at,
     :created_at,
     :updated_at,
+    :files,
   ].freeze
 
   # FORM_ATTRIBUTES
@@ -76,6 +78,7 @@ class FacilityDashboard < Administrate::BaseDashboard
     :facility_type,
     :level,
     :description,
+    :files,
   ].freeze
 
   # Overwrite this method to customize how facilities are displayed
@@ -86,5 +89,9 @@ class FacilityDashboard < Administrate::BaseDashboard
   # end
   def display_resource(item)
     item.name
+  end
+
+  def permitted_attributes
+    super + [{files: []}]
   end
 end
