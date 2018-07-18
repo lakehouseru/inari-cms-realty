@@ -13,5 +13,6 @@ Rails.application.routes.draw do
 		resources :facilities
 		resources :offers
 		resources :building_types
-  	end
+		delete 'facility_file', to: 'facilities#destroy_file', as: :destroy_file
+  end
 end
