@@ -25,7 +25,13 @@ module Admin
       remain_files = facility.files
       deleted_file = remain_files.delete_at(index)
       deleted_file.try(:remove!)
-      facility.files = remain_files
+
+      if remain_files.empty?
+        facility.remove_files!
+      else
+        facility.files = remain_files
+      end
+
       facility.save
       redirect_to edit_admin_facility_path(facility)
     end
