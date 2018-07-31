@@ -14,7 +14,7 @@ and renders all form fields for a resource's editable attributes.
 [1]: http://www.rubydoc.info/gems/administrate/Administrate/Page/Form
 %>
 
-<%= form_for([namespace, page.resource], html: { class: "form" }) do |f| %>
+<%= form_for([namespace, page.resource], html: { class: "form", :html => {:multipart => true} }) do |f| %>
   <% if page.resource.errors.any? %>
     <div id="error_explanation">
       <h2>
@@ -59,6 +59,26 @@ and renders all form fields for a resource's editable attributes.
     <div class="field-unit__field">
       <%= f.text_field :adress, class: 'form-control address' %>
     </div>
+  </div>
+
+  <div class="field-unit field-unit--has-many">
+    <div class="field-unit__label">
+      <%= f.label :files %>
+    </div>
+    <div class="field-unit__field">
+      <%= f.file_field :files, multiple: true, class: 'form-control' %>
+    </div>
+    <br>
+  </div>
+  <div style="margin-left: 11%;">
+    <% page.resource.files.each_with_index do |file, index| %>
+      <div>
+        <%= link_to "#{file.file.original_filename}", file.url, { target: "_blank", class: "btn waves-effect white-text" } %>
+        <%= link_to admin_destroy_file_path(facility_id: page.resource, index: index), :method => :delete, class: "destroy-link", data: { confirm: "Are you sure you want to delete this file?" } do %>
+          <i class="fa fa-trash" aria-hidden="true"></i>
+        <%end%>
+      </div>
+    <% end %>
   </div>
 
   <table  class="inform" border="0" cellpadding="1" cellspacing="1">

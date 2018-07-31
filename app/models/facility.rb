@@ -12,6 +12,7 @@ class Facility < ApplicationRecord
 
 	validates :name, :gallery, :adress, :square_gla, :square, :facility_type, :user,  presence: true
 
+  mount_uploaders :files, FileUploader
 
 	with_options prefix: true, allow_nil: false do
     delegate :name,         to: :facility_type

@@ -17,5 +17,17 @@ module Admin
 
     # See https://administrate-prototype.herokuapp.com/customizing_controller_actions
     # for more information
+
+    def destroy_file
+      facility = Facility.find(params[:facility_id])
+      index = params[:index].to_i
+
+      remain_files = facility.files
+      deleted_file = remain_files.delete_at(index)
+      deleted_file.try(:remove!)
+      facility.files = remain_files
+      facility.save
+      redirect_to edit_admin_facility_path(facility)
+    end
   end
 end
