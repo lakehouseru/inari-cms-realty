@@ -8,6 +8,7 @@ class OfferTypeDashboard < Administrate::BaseDashboard
       description:  WysiwygField,
       created_at: Field::DateTime,
       updated_at: Field::DateTime,
+      seo_field: Field::BelongsTo
   }
 
   COLLECTION_ATTRIBUTES = [
@@ -26,8 +27,8 @@ class OfferTypeDashboard < Administrate::BaseDashboard
 
   FORM_ATTRIBUTES = [\
       :name,
-      :description
-
+      :description,
+      :seo_field
   ]
   def display_resource(item)
     item.name

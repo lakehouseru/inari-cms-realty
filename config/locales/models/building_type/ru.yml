@@ -7,3 +7,4 @@ ru:
     attributes:
       building_type:
         name: Название
+        seo_field: Набор SEO полей

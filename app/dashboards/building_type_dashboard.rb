@@ -12,6 +12,7 @@ class BuildingTypeDashboard < Administrate::BaseDashboard
     name: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
+    seo_field: Field::BelongsTo
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -40,6 +41,7 @@ class BuildingTypeDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
     :name,
+    :seo_field,
   ].freeze
 
   # Overwrite this method to customize how building types are displayed

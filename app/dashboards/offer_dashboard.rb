@@ -24,6 +24,7 @@ class OfferDashboard < Administrate::BaseDashboard
     description: WysiwygField,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
+    seo_field: Field::BelongsTo
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -80,6 +81,7 @@ class OfferDashboard < Administrate::BaseDashboard
     :deposit,
     :square,
     :description,
+    :seo_field,
   ].freeze
 
   # Overwrite this method to customize how offers are displayed
@@ -89,6 +91,6 @@ class OfferDashboard < Administrate::BaseDashboard
   #   "Offer ##{offer.id}"
   # end
   def display_resource(item)
-    item.name
+    "#{item.name} - #{item.facility.name}"
   end
 end

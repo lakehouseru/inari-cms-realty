@@ -1,0 +1,16 @@
+ru:
+  activerecord:
+    models:
+      seo_field:
+        one:  SEO Поле
+        other: SEO Поля
+    attributes:
+      seo_field:
+        title: Название
+        description: Описание
+        keywords: Ключевые слова (чезер запятую)
+        facilities: Объекты
+        offers: Предложения
+        buildings: Строения
+        offer_types: Типы предложений
+        building_types: Типы строений

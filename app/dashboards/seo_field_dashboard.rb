@@ -1,6 +1,6 @@
 require "administrate/base_dashboard"
 
-class BuildingDashboard < Administrate::BaseDashboard
+class SeoFieldDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
   # a hash that describes the type of each of the model's fields.
   #
@@ -8,13 +8,14 @@ class BuildingDashboard < Administrate::BaseDashboard
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
-    facility: Field::BelongsTo,
-    id: Field::Number,
-    name: Field::String,
-    description: WysiwygField,
-    created_at: Field::DateTime,
-    updated_at: Field::DateTime,
-    seo_field: Field::BelongsTo
+      title: Field::String,
+      keywords: Field::String,
+      description:  Field::String,
+      facilities: Field::HasMany,
+      offers: Field::HasMany,
+      buildings: Field::HasMany,
+      building_types: Field::HasMany,
+      offer_types: Field::HasMany,
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -23,40 +24,38 @@ class BuildingDashboard < Administrate::BaseDashboard
   # By default, it's limited to four items to reduce clutter on index pages.
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
-    :id,
-    :name,
-    :description,
-    :facility
+      :title,
+      :keywords,
+      :description,
+      :facilities
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = [
-    :id,
-    :name,
-    :description,
-    :facility,
-    :created_at,
-    :updated_at,
+      :title,
+      :keywords,
+      :description
   ].freeze
 
   # FORM_ATTRIBUTES
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
-    :name,
-    :description,
-    :facility,
-    :seo_field,
+      :title,
+      :keywords,
+      :description,
+      :facilities,
+      :offers,
+      :buildings,
+      :building_types,
+      :offer_types,
   ].freeze
 
-  # Overwrite this method to customize how buildings are displayed
+  # Overwrite this method to customize how seo fields are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(building)
-  #   "Building ##{building.id}"
-  # end
-  def display_resource(item)
-    item.name
-  end
+  def display_resource(seo_field)
+     "Набор meta-полей:  #{seo_field.title}"
+   end
 end
