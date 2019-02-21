@@ -8,9 +8,12 @@ class SeoFieldDashboard < Administrate::BaseDashboard
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
+      id: Field::String,
       title: Field::String,
       keywords: Field::String,
       description:  Field::String,
+      uri:  Field::String,
+      slug:  Field::String,
       facilities: Field::HasMany,
       offers: Field::HasMany,
       buildings: Field::HasMany,
@@ -24,10 +27,12 @@ class SeoFieldDashboard < Administrate::BaseDashboard
   # By default, it's limited to four items to reduce clutter on index pages.
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
+      :id,
       :title,
       :keywords,
       :description,
-      :facilities
+      :facilities,
+
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -50,6 +55,9 @@ class SeoFieldDashboard < Administrate::BaseDashboard
       :buildings,
       :building_types,
       :offer_types,
+      :uri,
+      :slug,
+
   ].freeze
 
   # Overwrite this method to customize how seo fields are displayed

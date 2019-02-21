@@ -14,3 +14,5 @@ ru:
         buildings: Строения
         offer_types: Типы предложений
         building_types: Типы строений
+        uri: Привязать к URL
+        slug: Метка для быстрого поиска
