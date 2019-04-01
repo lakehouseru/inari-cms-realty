@@ -14,6 +14,7 @@ class FacilityTypeDashboard < Administrate::BaseDashboard
     description: WysiwygField,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
+    seo_field: Field::BelongsTo
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -34,6 +35,7 @@ class FacilityTypeDashboard < Administrate::BaseDashboard
     :id,
     :name,
     :description,
+    :seo_field,
     :created_at,
     :updated_at,
   ].freeze
@@ -44,6 +46,7 @@ class FacilityTypeDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = [
     :name,
     :description,
+    :seo_field
   ].freeze
 
   # Overwrite this method to customize how facility types are displayed

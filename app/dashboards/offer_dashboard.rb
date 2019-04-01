@@ -91,6 +91,6 @@ class OfferDashboard < Administrate::BaseDashboard
   #   "Offer ##{offer.id}"
   # end
   def display_resource(item)
-    "#{item.name} - #{item.facility.name}"
+    "#{item.name} #{item.square} м2 (#{item.price}руб.) - #{item.facility.name}" 
   end
 end
